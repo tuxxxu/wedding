@@ -1,0 +1,195 @@
+@font-face {
+    font-family: 'PPEditorialNew Italic';
+    src: url('scr/PPEditorialNew-Italic.woff2') format('woff2'),
+         url('scr/PPEditorialNew-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'PPEditorialNew Regular';
+    src: url('scr/PPEditorialNew-Regular.woff2') format('woff2'),
+         url('scr/PPEditorialNew-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PPEditorialNew Ultralight';
+    src: url('scr/PPEditorialNew-Ultralight.woff2') format('woff2'),
+         url('scr/PPEditorialNew-Ultralight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PPEditorialNew Ultralight Italic';
+    src: url('scr/PPEditorialNew-UltralightItalic.woff2') format('woff2'),
+         url('scr/PPEditorialNew-UltralightItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'PPNeueWorld';
+    src: url('scr/PPNeueWorld-Thin.woff2') format('woff2'),
+         url('scr/PPNeueWorld-Thin.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+:root {
+    --color-primary: #321474;
+    --color-neutral: #fff;
+  }
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'PPEditorialNew Italic';
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--color-primary);
+}
+html, body {
+    height: 100vh;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+.highlight .sign{
+    font-family: 'PPEditorialNew Ultralight Italic';
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title h1{
+    font-family: 'PPEditorialNew Ultralight';
+    font-size: 7rem;
+    letter-spacing: 0.02em;
+    text-align: center;
+    line-height: 90%;
+}
+.i{
+    font-family: 'PPEditorialNew Ultralight Italic';
+    font-size: 7rem;
+    letter-spacing: 0.02em;
+    line-height: 90%;
+}
+.e{
+    font-family: 'PPNeueWorld';
+    font-size: 5rem;
+    letter-spacing: 0.02em;
+    line-height: 90%;
+}
+.title p{
+    font-family: 'PPEditorialNew Ultralight Italic';
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+}
+footer div p:nth-child(2){
+    font-family: 'PPEditorialNew Ultralight';
+    font-size: .8rem;
+}
+footer div:nth-child(2){
+    direction: rtl;
+}
+.topic{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+}
+.top, .title, footer, .highlight, .topic, .button{
+    padding: 1.5rem;
+}
+.info{
+    background-color: var(--color-primary);
+}
+.highlight p, .topic p, .topic h1{
+    color: var(--color-neutral);
+}
+.highlight{
+    margin: 5rem 0;
+}
+.highlight p{
+    font-family: 'PPEditorialNew Ultralight';
+    font-size: 1.5rem;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+.topic h1, .topic p{
+    width: 100vw;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+}
+.topic h1{
+    font-family: 'PPEditorialNew Italic';
+    font-size: 1rem;
+}
+.topic p{
+    font-family: 'PPEditorialNew Ultralight';
+    font-size: 1rem;
+}
+.button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    gap: .5rem;
+}
+.button a{
+    border: 1px solid var(--color-neutral);
+    color: var(--color-neutral);
+    align-self: normal;
+    text-align: center;
+    align-content: center;
+    border-radius: .7rem;
+    height: 3.5rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+.button a:nth-child(1){
+    background-color: var(--color-neutral);
+    color: var(--color-primary);
+}
+.button a:nth-child(1):hover{
+    background-color: #7841F1;
+    border-color: #7841F1;
+    color: var(--color-neutral);
+    font-family: 'PPEditorialNew Regular';
+}
+.button a:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'PPEditorialNew Regular';
+}

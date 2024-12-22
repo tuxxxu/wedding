@@ -33,13 +33,13 @@
     font-style: italic;
 }
 @font-face {
-    font-family: 'PPNeueWorld';
-    src: url('PPNeueWorld-Thin.woff2') format('woff2'),
-         url('PPNeueWorld-Thin.woff') format('woff'),
-         url('PPNeueWorld-Thin.ttf') format('truetype');
+    font-family: 'ppneuewthin';
+    src: url('ppneueworld-thin-webfont.woff2') format('woff2'),
+         url('ppneueworld-thin-webfont.woff') format('woff');
     font-weight: normal;
-    font-style: italic;
+    font-style: normal;
 }
+
 :root {
     --color-primary: #321474;
     --color-neutral: #fff;
@@ -110,7 +110,7 @@ p, h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
 .e {
-    font-family: 'PPNeueWorld';
+    font-family: 'ppneuewthin';
     font-size: 5rem;
     letter-spacing: 0.02em;
     line-height: 1.2;

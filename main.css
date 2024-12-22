@@ -1,4 +1,3 @@
-/* Fontes com formatos adicionais */
 @font-face {
     font-family: 'PPEditorialNew Italic';
     src: url('scr/PPEditorialNew-Italic.woff2') format('woff2'),
@@ -158,8 +157,6 @@ footer div p:nth-child(2) {
 footer div:nth-child(2) {
     direction: rtl;
 }
-
-/* Tópicos */
 .topic {
     display: flex;
     flex-direction: row;

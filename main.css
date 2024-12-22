@@ -40,8 +40,6 @@
     font-weight: normal;
     font-style: italic;
 }
-
-/* Cores primárias */
 :root {
     --color-primary: #321474;
     --color-neutral: #fff;
@@ -62,6 +60,7 @@ html, body {
     height: 100%;
     background-color: #fff;
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; /* Suporte para rolagem suave no iOS */
 }
 img, picture, video, canvas, svg {
     display: block;
@@ -72,22 +71,29 @@ input, button, textarea, select {
 }
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
+    -webkit-hyphens: auto; /* Hifenização automática */
 }
 
-/* Hero */
 .hero {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
     flex-direction: column;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
+    -webkit-align-items: center;
     align-items: center;
     min-height: 100dvh; 
     min-height: -webkit-fill-available; /* Suporte para iOS */
 }
-
-/* Títulos */
 .title {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
     flex-direction: column;
+    -webkit-align-items: center;
     align-items: center;
 }
 .title h1 {
@@ -115,8 +121,6 @@ p, h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.02em;
     text-align: center;
 }
-
-/* Destaques */
 .highlight {
     margin: 5rem 0;
 }
@@ -133,20 +137,25 @@ p, h1, h2, h3, h4, h5, h6 {
 .highlight p, .topic p, .topic h1 {
     color: var(--color-neutral);
 }
-
-/* Informações */
 .info {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
     flex-direction: column;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
+    -webkit-align-items: center;
     align-items: center;
     background-color: var(--color-primary);
 }
-
-/* Rodapé */
 footer {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: row;
     flex-direction: row;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
     width: 100vw;
 }
@@ -158,8 +167,12 @@ footer div:nth-child(2) {
     direction: rtl;
 }
 .topic {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: row;
     flex-direction: row;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
     width: 100vw;
 }
@@ -177,17 +190,22 @@ footer div:nth-child(2) {
     font-size: 1rem;
 }
 .button {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
     flex-direction: column;
+    -webkit-align-items: center;
     align-items: center;
     width: 100vw;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 .button a {
     border: 1px solid var(--color-neutral);
     color: var(--color-neutral);
     align-self: normal;
     text-align: center;
+    -webkit-align-content: center;
     align-content: center;
     border-radius: 0.7rem;
     height: 3.5rem;

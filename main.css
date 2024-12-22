@@ -34,9 +34,9 @@
 }
 @font-face {
     font-family: 'PPNeueWorld';
-    src: url('scr/PPNeueWorld-Thin.woff2') format('woff2'),
-         url('scr/PPNeueWorld-Thin.woff') format('woff'),
-         url('scr/PPNeueWorld-Thin.ttf') format('truetype');
+    src: url('PPNeueWorld-Thin.woff2') format('woff2'),
+         url('PPNeueWorld-Thin.woff') format('woff'),
+         url('PPNeueWorld-Thin.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 }

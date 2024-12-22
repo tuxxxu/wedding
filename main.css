@@ -1,43 +1,51 @@
 @font-face {
     font-family: 'PPEditorialNew Italic';
     src: url('scr/PPEditorialNew-Italic.woff2') format('woff2'),
-         url('scr/PPEditorialNew-Italic.woff') format('woff');
+         url('scr/PPEditorialNew-Italic.woff') format('woff'),
+         url('scr/PPEditorialNew-Italic.ttf') format('truetype'),
+         url('scr/PPEditorialNew-Italic.eot');
     font-weight: normal;
     font-style: italic;
 }
 @font-face {
     font-family: 'PPEditorialNew Regular';
     src: url('scr/PPEditorialNew-Regular.woff2') format('woff2'),
-         url('scr/PPEditorialNew-Regular.woff') format('woff');
+         url('scr/PPEditorialNew-Regular.woff') format('woff'),
+         url('scr/PPEditorialNew-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'PPEditorialNew Ultralight';
     src: url('scr/PPEditorialNew-Ultralight.woff2') format('woff2'),
-         url('scr/PPEditorialNew-Ultralight.woff') format('woff');
+         url('scr/PPEditorialNew-Ultralight.woff') format('woff'),
+         url('scr/PPEditorialNew-Ultralight.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'PPEditorialNew Ultralight Italic';
     src: url('scr/PPEditorialNew-UltralightItalic.woff2') format('woff2'),
-         url('scr/PPEditorialNew-UltralightItalic.woff') format('woff');
+         url('scr/PPEditorialNew-UltralightItalic.woff') format('woff'),
+         url('scr/PPEditorialNew-UltralightItalic.ttf') format('truetype'),
+         url('scr/PPEditorialNew-UltralightItalic.eot');
     font-weight: normal;
     font-style: italic;
 }
 @font-face {
     font-family: 'PPNeueWorld';
     src: url('scr/PPNeueWorld-Thin.woff2') format('woff2'),
-         url('scr/PPNeueWorld-Thin.woff') format('woff');
+         url('scr/PPNeueWorld-Thin.woff') format('woff'),
+         url('scr/PPNeueWorld-Thin.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 }
 
+
 :root {
     --color-primary: #321474;
     --color-neutral: #fff;
-  }
+}
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -51,7 +59,7 @@
     color: var(--color-primary);
 }
 html, body {
-    height: 100vh;
+    height: 100%;
     background-color: #fff;
     overflow-x: hidden;
 }
@@ -65,131 +73,140 @@ input, button, textarea, select {
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
-.hero{
+
+.hero {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    min-height: 100dvh; 
+    min-height: -webkit-fill-available; /* Suporte para iOS */
 }
-.highlight .sign{
-    font-family: 'PPEditorialNew Ultralight Italic';
-}
-.info{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-.title{
+
+.title {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.title h1{
+.title h1 {
     font-family: 'PPEditorialNew Ultralight';
-    font-size: 7rem;
+    font-size: clamp(2rem, 5vw, 7rem);
     letter-spacing: 0.02em;
     text-align: center;
-    line-height: 90%;
+    line-height: 1.2;
 }
-.i{
+.i {
     font-family: 'PPEditorialNew Ultralight Italic';
-    font-size: 7rem;
+    font-size: clamp(2rem, 5vw, 7rem);
     letter-spacing: 0.02em;
-    line-height: 90%;
+    line-height: 1.2;
 }
-.e{
+.e {
     font-family: 'PPNeueWorld';
-    font-size: 5rem;
+    font-size: clamp(2rem, 4vw, 5rem);
     letter-spacing: 0.02em;
-    line-height: 90%;
+    line-height: 1.2;
 }
-.title p{
+.title p {
     font-family: 'PPEditorialNew Ultralight Italic';
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 2vw, 1rem);
     letter-spacing: 0.02em;
+    text-align: center;
 }
-footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100vw;
-}
-footer div p:nth-child(2){
-    font-family: 'PPEditorialNew Ultralight';
-    font-size: .8rem;
-}
-footer div:nth-child(2){
-    direction: rtl;
-}
-.topic{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100vw;
-}
-.top, .title, footer, .highlight, .topic, .button{
-    padding: 1.5rem;
-}
-.info{
-    background-color: var(--color-primary);
-}
-.highlight p, .topic p, .topic h1{
-    color: var(--color-neutral);
-}
-.highlight{
+
+.highlight {
     margin: 5rem 0;
 }
-.highlight p{
+.highlight .sign {
+    font-family: 'PPEditorialNew Ultralight Italic';
+}
+.highlight p {
     font-family: 'PPEditorialNew Ultralight';
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 4vw, 1.5rem);
     line-height: 150%;
     letter-spacing: 0.03em;
     text-align: center;
 }
-.topic h1, .topic p{
+.highlight p, .topic p, .topic h1 {
+    color: var(--color-neutral);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primary);
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+}
+footer div p:nth-child(2) {
+    font-family: 'PPEditorialNew Ultralight';
+    font-size: 0.8rem;
+}
+footer div:nth-child(2) {
+    direction: rtl;
+}
+
+.topic {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+}
+.topic h1, .topic p {
     width: 100vw;
     line-height: 150%;
     letter-spacing: 0.03em;
 }
-.topic h1{
+.topic h1 {
     font-family: 'PPEditorialNew Italic';
     font-size: 1rem;
 }
-.topic p{
+.topic p {
     font-family: 'PPEditorialNew Ultralight';
     font-size: 1rem;
 }
-.button{
+
+.button {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    gap: .5rem;
+    gap: 0.5rem;
 }
-.button a{
+.button a {
     border: 1px solid var(--color-neutral);
     color: var(--color-neutral);
     align-self: normal;
     text-align: center;
     align-content: center;
-    border-radius: .7rem;
-    height: 3.5rem;
+    border-radius: clamp(0.5rem, 2vw, 0.7rem);
+    height: clamp(2.5rem, 8vw, 3.5rem);
     text-decoration: none;
     cursor: pointer;
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
 }
-.button a:nth-child(1){
+.button a:nth-child(1) {
     background-color: var(--color-neutral);
     color: var(--color-primary);
 }
-.button a:nth-child(1):hover{
+.button a:nth-child(1):hover {
     background-color: #7841F1;
     border-color: #7841F1;
     color: var(--color-neutral);
     font-family: 'PPEditorialNew Regular';
 }
-.button a:hover{
+.button a:hover {
     background-color: rgba(0, 0, 0, 0.3);
     font-family: 'PPEditorialNew Regular';
+}
+
+.top, .title, footer, .highlight, .topic, .button {
+    padding: 1.5rem;
 }

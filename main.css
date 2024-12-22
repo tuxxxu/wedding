@@ -4,7 +4,6 @@
          url('font/ppeditorialnew-ultralight-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 @font-face {
     font-family: 'pp_editorial_newultraLtIt';
@@ -12,7 +11,6 @@
          url('font/ppeditorialnew-ultralightitalic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 @font-face {
     font-family: 'pp_editorial_newregular';
@@ -20,7 +18,6 @@
          url('font/ppeditorialnew-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 @font-face {
     font-family: 'pp_editorial_newitalic';
@@ -28,7 +25,6 @@
          url('font/ppeditorialnew-italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 @font-face {
     font-family: 'pp_neue_worldthin';
@@ -36,8 +32,8 @@
          url('font/ppneueworld-thin-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
+
 :root {
     --color-primary: #321474;
     --color-neutral: #fff;
@@ -73,43 +69,34 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .hero {
-    display: -webkit-box;
-    display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: column;
     flex-direction: column;
-    -webkit-justify-content: space-between;
     justify-content: space-between;
-    -webkit-align-items: center;
     align-items: center;
-    min-height: 100dvh; 
+    min-height: 100dvh;
     min-height: -webkit-fill-available; /* Suporte para iOS */
 }
 .title {
-    display: -webkit-box;
-    display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: column;
     flex-direction: column;
-    -webkit-align-items: center;
     align-items: center;
 }
 .title h1 {
     font-family: 'pp_editorial_newultralight';
-    font-size: 8rem;
+    font-size: 7rem;
     letter-spacing: 0.02em;
     text-align: center;
     line-height: 90%;
 }
 .i {
     font-family: 'pp_editorial_newultraLtIt';
-    font-size: 8rem;
+    font-size: 7rem;
     letter-spacing: 0.02em;
     line-height: 90%;
 }
 .e {
     font-family: 'pp_neue_worldthin';
-    font-size: 7rem;
+    font-size: 5rem;
     letter-spacing: 0.02em;
     line-height: 90%;
 }
@@ -136,24 +123,15 @@ p, h1, h2, h3, h4, h5, h6 {
     color: var(--color-neutral);
 }
 .info {
-    display: -webkit-box;
-    display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: column;
     flex-direction: column;
-    -webkit-justify-content: space-between;
     justify-content: space-between;
-    -webkit-align-items: center;
     align-items: center;
     background-color: var(--color-primary);
 }
 footer {
-    display: -webkit-box;
-    display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: row;
     flex-direction: row;
-    -webkit-justify-content: space-between;
     justify-content: space-between;
     width: 100vw;
 }
@@ -165,12 +143,8 @@ footer div:nth-child(2) {
     direction: rtl;
 }
 .topic {
-    display: -webkit-box;
-    display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: row;
     flex-direction: row;
-    -webkit-justify-content: space-between;
     justify-content: space-between;
     width: 100vw;
 }
@@ -188,12 +162,8 @@ footer div:nth-child(2) {
     font-size: 1rem;
 }
 .button {
-    display: -webkit-box;
-    display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: column;
     flex-direction: column;
-    -webkit-align-items: center;
     align-items: center;
     width: 100vw;
     gap: 1rem;
@@ -203,7 +173,6 @@ footer div:nth-child(2) {
     color: var(--color-neutral);
     align-self: normal;
     text-align: center;
-    -webkit-align-content: center;
     align-content: center;
     border-radius: 0.7rem;
     height: 3.5rem;
@@ -225,7 +194,38 @@ footer div:nth-child(2) {
     background-color: rgba(0, 0, 0, 0.3);
     font-family: 'pp_editorial_newregular';
 }
-
 .top, .title, footer, .highlight, .topic, .button {
     padding: 1.5rem;
 }
+.slide-text {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap; /* importante */
+    gap: 1rem;
+}
+.hero, .info{
+    position: relative;
+}
+.gallery{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 16px; /* Espaço entre as imagens */
+    padding: 16px;
+    height: 100dvh;
+    width: 100dvw;
+    z-index: 0;
+}
+.gallery .image{
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+.img-1{
+    background-image: url('https://s2-g1.glbimg.com/k-DCW8EfgmdDPuy2jEBPDZc99LU=/0x0:6240x4160/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/o/2/XprYAISAK6ESIqx1DiJw/duonguyen-crsf94jldpe-unsplash.jpg');
+    opacity: 0.2;
+}
+

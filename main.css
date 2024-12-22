@@ -179,8 +179,6 @@ footer div:nth-child(2) {
     font-family: 'PPEditorialNew Ultralight';
     font-size: 1rem;
 }
-
-/* Botões */
 .button {
     display: flex;
     flex-direction: column;

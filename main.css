@@ -235,9 +235,9 @@ footer div:nth-child(2) {
     justify-content: center;
     align-items: center;
     aspect-ratio: 1/1;
-    border-radius: .2rem;
+    border-radius: .2px;
     background-position: center;
-    background-size: contain;
+    background-size: 100%;
     background-repeat: no-repeat;
     opacity: .1;
     transition: opacity .3s ease-in-out;
@@ -337,10 +337,6 @@ footer div:nth-child(2) {
 }
 .img-32 { 
     background-image: url('src/img-32.png');
-}
-.guests{
-    position: absolute;
-    bottom: 20%;
 }
 .Typewriter__wrapper{
     display: flex;

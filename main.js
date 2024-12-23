@@ -43,26 +43,61 @@ function toggleOpacityRandomly() {
 
 setInterval(toggleOpacityRandomly, 1500);
 
-// Função para inicializar o efeito de máquina de escrever
-function initTypewriterEffect() {
-    const guestsElement = document.querySelector('.guests');
-    const typewriter = new Typewriter(guestsElement, {
-        loop: false,
-        delay: 75,
-        cursor: "" // Desativa o cursor
-    });
 
-    typewriter
-        .typeString('<p>Olá, Giovana e Gustavo</p>')
+/// URL para carregar o JSON
+const guestsDataUrl = 'guests.json';
+
+// Função para obter o número de telefone da URL
+function getPhoneFromURL() {
+    const query = window.location.search;
+    return query.startsWith("?") ? query.substring(1) : ""; // Remove o "?" e retorna o número
+}
+
+// Função para carregar os dados do JSON
+async function loadGuestData() {
+    try {
+        const response = await fetch(guestsDataUrl);
+        if (!response.ok) throw new Error("Erro ao carregar os dados do JSON.");
+        return await response.json();
+    } catch (error) {
+        console.error(error);
+        return [];
+    }
+}
+
+// Função para encontrar o nome no JSON pelo telefone
+function getGuestNameByPhone(guests, phone) {
+    const guest = guests.find(item => item.phone === phone);
+    return guest ? guest.name : "Convidado";
+}
+
+// Função principal para exibir o nome no HTML
+async function displayGuestName() {
+    const phone = getPhoneFromURL(); // Obtém o telefone da URL
+    const guests = await loadGuestData(); // Carrega os dados do JSON
+    const guestName = getGuestNameByPhone(guests, phone); // Encontra o nome correspondente
+
+    // Atualiza o HTML com o nome do convidado
+    const guestElement = document.querySelector('#guests');
+    if (guestElement) {
+        // Adiciona o texto ao elemento e inicializa o efeito Typewriter
+        const typewriter = new Typewriter(guestElement,{
+            loop: false,
+            delay: 50,
+            cursor: ""
+        });
+        
+        typewriter
         .pauseFor(500)
+        .typeString('<p>Olá, '+ guestName + '</p>')
         .typeString('<p>Bora confirmar a presença</p>')
         .pauseFor(500)
         .typeString('<p>no nosso casamento!</p>')
         .start();
+        
+    }
 }
 
-// Inicializa o efeito quando a página carregar
-window.onload = function () {
-    randomizeClipboardText(); // Chama a função do Clipboard
-    initTypewriterEffect();  // Inicia o efeito de máquina de escrever
-};
+// Executa a função ao carregar a página
+window.onload = displayGuestName;
+

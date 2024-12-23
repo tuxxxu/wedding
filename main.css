@@ -246,7 +246,7 @@ footer div:nth-child(2) {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 110dvh;
+    height: 100dvh;
     position: relative;
     backdrop-filter: blur(4px);
   }
@@ -357,3 +357,4 @@ footer div:nth-child(2) {
     flex-direction: column;
     align-items: center;
 }
+

@@ -40,18 +40,55 @@
             <span class="image img-28"></span>
             <span class="image img-29"></span>
             <span class="image img-30"></span>
+            <span class="image img-1"></span>
+            <span class="image img-2"></span>
+            <span class="image img-3"></span>
+            <span class="image img-4"></span>
+            <span class="image img-5"></span>
+            <span class="image img-6"></span>
+            <span class="image img-7"></span>
+            <span class="image img-8"></span>
+            <span class="image img-9"></span>
+            <span class="image img-10"></span>
+            <span class="image img-11"></span>
+            <span class="image img-12"></span>
+            <span class="image img-13"></span>
+            <span class="image img-14"></span>
+            <span class="image img-15"></span>
+            <span class="image img-16"></span>
+            <span class="image img-17"></span>
+            <span class="image img-18"></span>
+            <span class="image img-19"></span>
+            <span class="image img-20"></span>
+            <span class="image img-21"></span>
+            <span class="image img-22"></span>
+            <span class="image img-23"></span>
+            <span class="image img-24"></span>
+            <span class="image img-25"></span>
+            <span class="image img-26"></span>
+            <span class="image img-27"></span>
+            <span class="image img-28"></span>
+            <span class="image img-29"></span>
+            <span class="image img-30"></span>
+            <span class="image img-31"></span>
+            <span class="image img-32"></span>
 
         </div>
     </section>
 
     <section class="hero">
         <div class="top slide-text">
-            <p>Celebrar o nosso amor & Festejar as conquistas   •   Celebrar o nosso amor & Festejar as conquistas   •   Celebrar o nosso amor & Festejar as conquistas</p>
+            <p>Celebrar o nosso amor & Festejar as conquistas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebrar o nosso amor & Festejar as conquistas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebrar o nosso amor & Festejar as conquistas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebrar o nosso amor & Festejar as conquistas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebrar o nosso amor & Festejar as conquistas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebrar o nosso amor & Festejar as conquistas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebrar o nosso amor & Festejar as conquistas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebrar o nosso amor & Festejar as conquistas</p>
         </div>
 
         <div class="title">
             <h1>Hill<span class="i">a</span>r<span class="i">y</span><br><span class="e">& </span>T<span class="i">u</span>xu</h1>
             <p>Uma década rabiscando os nossos próximos capítulos</p>
+        </div>
+        <div class="guests">
+            <p>Olá, <span id="guests">Giovana & Gustavo</span></p>
+            <p>Bora confirmar a presença</p>
+            <p>no nosso casamento!</p>
         </div>
         <footer>
             <div>
@@ -63,6 +100,7 @@
                 <p>Estr. Boa Vista, 56 - Mairiporã</p>   
             </div>
         </footer>
+
     </section>
 
     <section class="info">
@@ -97,72 +135,10 @@
             <a href="#" class="copy-btn" data-clipboard-text="tuxu">Copiar Pix</a>
         </div>
     </section>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typewriter-effect/dist/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="main.js"></script>
     
-
-    <script>
-        // Função que altera o data-clipboard-text aleatoriamente
-        function randomizeClipboardText() {
-            const copyBtn = document.querySelector('.copy-btn'); // Seleciona o botão com a classe 'copy-btn'
-            
-            // Cria um array com as opções possíveis
-            const options = ['tuxu', 'hillary'];
-            
-            // Escolhe aleatoriamente um valor do array
-            const randomText = options[Math.floor(Math.random() * options.length)];
-            
-            // Altera o valor do data-clipboard-text
-            copyBtn.setAttribute('data-clipboard-text', randomText);
-        }
-    
-        // Chama a função quando a página carregar
-        window.onload = randomizeClipboardText;
-    </script>
-    
-    <script>
-    const clipboard = new ClipboardJS('.copy-btn');
-    clipboard.on('success', function (e) {
-      const button = e.trigger;
-      const originalText = button.textContent;
-      button.textContent = 'Pix copiado 🤑';
-      setTimeout(() => {
-        button.textContent = originalText;
-      }, 1000);
-      e.clearSelection();
-    });
-    clipboard.on('error', function (e) {
-      console.error('Erro ao copiar:', e.action);
-    });
-    </script>
-    <script>
-        let elt = document.querySelectorAll('.slide-text > *')
-        anime({
-        targets: elt,
-        translateX: '-100%',
-        duration: 20000,
-        easing: 'linear',
-        loop: true
-        });
-    </script>
-    <script>
-        function toggleOpacityRandomly() {
-          const totalImages = 30; 
-          const randomIndex = Math.floor(Math.random() * totalImages) + 1; 
-          const targetElement = document.querySelector(`.img-${randomIndex}`);
-
-          const allImages = document.querySelectorAll('.image');
-          allImages.forEach(image => {
-            image.style.opacity = '0.2'; // Restaura a opacidade inicial
-            image.style.setProperty('opacity', '0.2', 'important');
-          });
-      
-          targetElement.style.opacity = '1';
-          targetElement.style.setProperty('opacity', '1', 'important');
-        }
-      
-        setInterval(toggleOpacityRandomly, 2000);
-      </script>
 </body>
 </html>

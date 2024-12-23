@@ -9,28 +9,44 @@
 <body>
 
     <section class="gallery">
-        <span class="image img-1"></span>
-        <span class="image img-1"></span>
-        <span class="image img-1"></span>
-        <span class="image img-1"></span>
-        <span class="image img-1"></span>
-        <span class="image img-1"></span>
-        <span class="image img-1"></span>
-        <span class="image img-1"></span>
-        <span class="image img-1"></span>
-        <span class="image img-1"></span>
-        <span class="image img-1"></span>
-        <span class="image img-1"></span>
-        <span class="image img-1"></span>
-        <span class="image img-1"></span>
+        <div>
+            <span class="image img-1"></span>
+            <span class="image img-2"></span>
+            <span class="image img-3"></span>
+            <span class="image img-4"></span>
+            <span class="image img-5"></span>
+            <span class="image img-6"></span>
+            <span class="image img-7"></span>
+            <span class="image img-8"></span>
+            <span class="image img-9"></span>
+            <span class="image img-10"></span>
+            <span class="image img-11"></span>
+            <span class="image img-12"></span>
+            <span class="image img-13"></span>
+            <span class="image img-14"></span>
+            <span class="image img-15"></span>
+            <span class="image img-16"></span>
+            <span class="image img-17"></span>
+            <span class="image img-18"></span>
+            <span class="image img-19"></span>
+            <span class="image img-20"></span>
+            <span class="image img-21"></span>
+            <span class="image img-22"></span>
+            <span class="image img-23"></span>
+            <span class="image img-24"></span>
+            <span class="image img-25"></span>
+            <span class="image img-26"></span>
+            <span class="image img-27"></span>
+            <span class="image img-28"></span>
+            <span class="image img-29"></span>
+            <span class="image img-30"></span>
 
+        </div>
     </section>
 
     <section class="hero">
         <div class="top slide-text">
-            <p>Celebrar o nosso amor & Festejar as conquistas</p>
-            <p>Celebrar o nosso amor & Festejar as conquistas</p>
-            <p>Celebrar o nosso amor & Festejar as conquistas</p>
+            <p>Celebrar o nosso amor & Festejar as conquistas   •   Celebrar o nosso amor & Festejar as conquistas   •   Celebrar o nosso amor & Festejar as conquistas</p>
         </div>
 
         <div class="title">
@@ -78,12 +94,33 @@
 
         <div class="button">
             <a href="#">Confirmar Presença</a>
-            <a href="#" class="copy-btn" data-clipboard-text="f65e527d-f98e-421b-90b9-cd25780fabb8">Copiar Pix</a>
+            <a href="#" class="copy-btn" data-clipboard-text="tuxu">Copiar Pix</a>
         </div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+
+    <script>
+        // Função que altera o data-clipboard-text aleatoriamente
+        function randomizeClipboardText() {
+            const copyBtn = document.querySelector('.copy-btn'); // Seleciona o botão com a classe 'copy-btn'
+            
+            // Cria um array com as opções possíveis
+            const options = ['tuxu', 'hillary'];
+            
+            // Escolhe aleatoriamente um valor do array
+            const randomText = options[Math.floor(Math.random() * options.length)];
+            
+            // Altera o valor do data-clipboard-text
+            copyBtn.setAttribute('data-clipboard-text', randomText);
+        }
+    
+        // Chama a função quando a página carregar
+        window.onload = randomizeClipboardText;
+    </script>
+    
     <script>
     const clipboard = new ClipboardJS('.copy-btn');
     clipboard.on('success', function (e) {
@@ -109,5 +146,23 @@
         loop: true
         });
     </script>
+    <script>
+        function toggleOpacityRandomly() {
+          const totalImages = 30; 
+          const randomIndex = Math.floor(Math.random() * totalImages) + 1; 
+          const targetElement = document.querySelector(`.img-${randomIndex}`);
+
+          const allImages = document.querySelectorAll('.image');
+          allImages.forEach(image => {
+            image.style.opacity = '0.2'; // Restaura a opacidade inicial
+            image.style.setProperty('opacity', '0.2', 'important');
+          });
+      
+          targetElement.style.opacity = '1';
+          targetElement.style.setProperty('opacity', '1', 'important');
+        }
+      
+        setInterval(toggleOpacityRandomly, 2000);
+      </script>
 </body>
 </html>

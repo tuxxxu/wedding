@@ -1,25 +1,47 @@
+// Função para randomizar o conteúdo do clipboard ao clicar
 function randomizeClipboardText() {
     const copyBtn = document.querySelector('.copy-btn');
-    const options = ['f65e527d-f98e-421b-90b9-cd25780fabb8', 'd6d2c6c5-8101-4e49-b873-92b278600da1'];
-    const randomText = options[Math.floor(Math.random() * options.length)];
-    copyBtn.setAttribute('data-clipboard-text', randomText);
+    if (copyBtn) {
+        const options = ['f65e527d-f98e-421b-90b9-cd25780fabb8', 'd6d2c6c5-8101-4e49-b873-92b278600da1'];
+        const randomText = options[Math.floor(Math.random() * options.length)];
+        copyBtn.setAttribute('data-clipboard-text', randomText);
+    }
 }
-window.onload = randomizeClipboardText;
-const clipboard = new ClipboardJS('.copy-btn');
-clipboard.on('success', function (e) {
-    const button = e.trigger;
-    const originalText = button.textContent;
-    button.textContent = 'Pix copiado com sucesso 🤑';
-    setTimeout(() => {
-        button.textContent = originalText;
-    }, 1000);
-    e.clearSelection();
-});
-clipboard.on('error', function (e) {
-    console.error('Erro ao copiar:', e.action);
+
+// Inicializa o ClipboardJS e configura a lógica de sucesso e erro
+function initializeClipboardJS() {
+    const clipboard = new ClipboardJS('.copy-btn');
+    clipboard.on('success', function (e) {
+        const button = e.trigger;
+        const originalText = button.textContent;  // Armazena o texto original do botão
+
+        // Atualiza o texto do botão para o feedback de sucesso
+        button.textContent = 'Pix copiado com sucesso 🤑';
+
+        // Após 1 segundo, volta o texto para o original
+        setTimeout(() => {
+            button.textContent = originalText;
+        }, 1000);
+
+        e.clearSelection();
+    });
+
+    clipboard.on('error', function (e) {
+        console.error('Erro ao copiar:', e.action);
+    });
+}
+
+// Esperar que a página carregue completamente
+window.addEventListener('load', function () {
+    initializeClipboardJS();  // Inicializa o ClipboardJS apenas uma vez
 });
 
-// top animate
+// Adiciona um evento de clique ao botão para randomizar o clipboard
+document.querySelector('.copy-btn').addEventListener('click', function() {
+    randomizeClipboardText();  // Randomiza o conteúdo do clipboard a cada clique
+});
+
+// Top animate
 let elt = document.querySelectorAll('.slide-text > *');
 anime({
     targets: elt,
@@ -29,7 +51,7 @@ anime({
     loop: true
 });
 
-//random opacity 
+// Random opacity
 function toggleOpacityRandomly() {
     const totalImages = 30; 
     const randomIndex = Math.floor(Math.random() * totalImages) + 1; 
@@ -47,8 +69,7 @@ function toggleOpacityRandomly() {
 
 setInterval(toggleOpacityRandomly, 1500);
 
-
-/// URL para carregar o JSON
+// URL para carregar o JSON
 const guestsDataUrl = 'guests.json';
 
 // Função para obter o número de telefone da URL
@@ -98,10 +119,8 @@ async function displayGuestName() {
         .pauseFor(500)
         .typeString('<p>no nosso casamento!</p>')
         .start();
-        
     }
 }
 
-// Executa a função ao carregar a página
-window.onload = displayGuestName;
-
+// Executa a função para exibir o nome do convidado
+displayGuestName();

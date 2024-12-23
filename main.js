@@ -124,3 +124,14 @@ async function displayGuestName() {
 
 // Executa a função para exibir o nome do convidado
 displayGuestName();
+
+
+// scroll
+
+document.querySelector('.button').addEventListener('click', function (e) {
+    e.preventDefault(); // Evita o comportamento padrão do link
+    document.querySelector('#forms').scrollIntoView({ 
+      behavior: 'smooth' 
+    });
+  });
+  

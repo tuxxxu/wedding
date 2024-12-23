@@ -242,6 +242,19 @@ footer div:nth-child(2) {
     opacity: .1;
     transition: opacity .3s ease-in-out;
 }
+.forms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120dvh;
+    position: relative;
+  }
+  .forms iframe {
+    padding: 1rem;
+    width: 100%; /* Largura do iframe */
+    height: 100%; /* Altura do iframe */
+  }
+
 .img-1 { 
     background-image: url('src/img-1.png');
 }

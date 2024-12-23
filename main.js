@@ -93,7 +93,7 @@ async function loadGuestData() {
 // Função para encontrar o nome no JSON pelo telefone
 function getGuestNameByPhone(guests, phone) {
     const guest = guests.find(item => item.phone === phone);
-    return guest ? guest.name : "Convidado";
+    return guest ? guest.name : "Convidadx";
 }
 
 // Função principal para exibir o nome no HTML

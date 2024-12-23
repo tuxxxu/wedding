@@ -248,6 +248,7 @@ footer div:nth-child(2) {
     align-items: center;
     height: 120dvh;
     position: relative;
+    backdrop-filter: blur(4px);
   }
   .forms iframe {
     padding: 1rem;

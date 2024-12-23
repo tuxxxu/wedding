@@ -18,6 +18,8 @@ clipboard.on('success', function (e) {
 clipboard.on('error', function (e) {
     console.error('Erro ao copiar:', e.action);
 });
+
+// top animate
 let elt = document.querySelectorAll('.slide-text > *');
 anime({
     targets: elt,
@@ -26,6 +28,8 @@ anime({
     easing: 'linear',
     loop: true
 });
+
+//random opacity 
 function toggleOpacityRandomly() {
     const totalImages = 30; 
     const randomIndex = Math.floor(Math.random() * totalImages) + 1; 

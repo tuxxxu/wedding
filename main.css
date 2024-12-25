@@ -33,7 +33,41 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'icomoon';
+    src:  url('font/icomoon.eot?3t8wpq');
+    src:  url('font/icomoon.eot?3t8wpq#iefix') format('embedded-opentype'),
+      url('font/icomoon.ttf?3t8wpq') format('truetype'),
+      url('font/icomoon.woff?3t8wpq') format('woff'),
+      url('font/icomoon.svg?3t8wpq#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+[class^="icon-"], [class*=" icon-"] {
+/* use !important to prevent issues with browser extensions that change fonts */
+font-family: 'icomoon' !important;
+speak: never;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+line-height: 1;
 
+/* Better Font Rendering =========== */
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+  
+.icon-bong:before {
+content: "\e900";
+}
+.icon-hemp:before {
+content: "\e901";
+}
+.icon-joint:before {
+content: "\e902";
+}
 :root {
     --color-primary: #321474;
     --color-neutral: #fff;
@@ -98,11 +132,15 @@ p, h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.02em;
     line-height: 90%;
 }
-.e {
+.e, #shuffle span {
     font-family: 'pp_neue_worldthin';
     font-size: 5rem;
     letter-spacing: 0.02em;
-    line-height: 90%;
+    line-height: 50%;
+    width: 5rem;
+    align-self: end;
+    position: relative;
+    bottom: -.5rem;
 }
 .title p {
     font-family: 'pp_editorial_newultralight';
@@ -110,6 +148,14 @@ p, h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.02em;
     text-align: center;
 }
+.title h1:nth-child(2){
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: baseline;
+}
+
 .highlight {
     margin: 5rem 0;
 }
@@ -357,4 +403,3 @@ footer div:nth-child(2) {
     flex-direction: column;
     align-items: center;
 }
-

@@ -133,7 +133,7 @@ function setupSmoothScroll() {
 var app = document.getElementById('shuffle');
 var typewriter = new Typewriter(shuffle, {
   loop: true,
-  delay: 0,
+  delay: 1000,
   cursor: '',
 });
 

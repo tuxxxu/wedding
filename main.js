@@ -133,13 +133,13 @@ function setupSmoothScroll() {
 var app = document.getElementById('shuffle');
 var typewriter = new Typewriter(shuffle, {
   loop: true,
-  delay: 1000,
+  delay: 0,
   cursor: '',
 });
 
 typewriter
   .typeString('&')
-  .pauseFor(10000)
+  .pauseFor(50000)
   .deleteChars(1)
   .typeString('<span class="icon-bong e"></span>')
   .pauseFor(5000)

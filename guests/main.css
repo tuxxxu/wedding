@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'pp_editorial_newultralight';
+    src: url('font/ppeditorialnew-ultralight-webfont.woff2') format('woff2'),
+         url('font/ppeditorialnew-ultralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pp_editorial_newultraLtIt';
+    src: url('font/ppeditorialnew-ultralightitalic-webfont.woff2') format('woff2'),
+         url('font/ppeditorialnew-ultralightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pp_neue_worldthin';
+    src: url('font/ppneueworld-thin-webfont.woff2') format('woff2'),
+         url('font/ppneueworld-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pp_editorial_newitalic';
+    src: url('font/ppeditorialnew-italic-webfont.woff2') format('woff2'),
+         url('font/ppeditorialnew-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+:root {
+    --color-primary: #321474;
+    --color-neutral: #fff;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'pp_editorial_newitalic';
+    font-size: 1rem;
+    font-weight: normal;
+    text-align: center;
+    color: var(--color-primary);
+}
+html, body {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; /* Suporte para rolagem suave no iOS */
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+body{
+    background-color: var(--color-primary);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+}
+main{
+    background-color: var(--color-neutral);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 2rem;
+    height: 100dvh;
+    border-radius: 1rem;
+}
+h1{
+    margin-top: 2rem;
+    font-family: 'pp_editorial_newultralight';
+    font-weight: normal;
+    font-size: 4rem;
+    letter-spacing: 0.02em;
+    text-align: center;
+    line-height: 90%;
+}
+i{
+    font-family: 'pp_editorial_newultraLtIt';
+    font-weight: normal;
+    font-size: 4rem;
+}
+b{
+    font-family: 'pp_neue_worldthin';
+    font-weight: normal;
+    font-size: 3.5rem;
+}
+p{
+    margin-top: .5rem;
+    font-family: 'pp_editorial_newitalic';
+    font-weight: normal;
+    font-size: .6rem;
+    letter-spacing: 0.02em;
+    text-align: center;
+    line-height: 90%;   
+}
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer p{
+    text-align: left;
+    line-height: 120%;
+}
+footer div p:nth-child(2) {
+    font-family: 'pp_editorial_newultralight';
+    font-size: 0.8rem;
+}
+footer div:nth-child(2), footer div:nth-child(2) p{
+    direction: rtl;
+    text-align: right;
+}
+.qrcode{
+    align-self: center;
+}
+img{
+    width: 180px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover; 
+    border-radius: 1rem;
+}
+.guest{
+    align-self: center;
+}
+span{
+    font-size: 1.2rem;
+}
+a{
+    background-color: var(--color-primary);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    align-self: center;
+    font-size: .8rem;
+    color: var(--color-neutral);
+    text-decoration: none;
+}
+a:hover{
+    background-color: #230E51;
+    cursor: pointer;
+}
